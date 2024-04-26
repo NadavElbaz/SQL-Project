@@ -1,0 +1,98 @@
+---  Number 1
+
+SELECT
+	 [First Name],
+	 COUNT([First Name]) AS 'CountOfDisplayingFN'
+FROM
+	Employees
+GROUP BY [First Name]
+
+--- Number 2
+
+SELECT TOP 1
+	 [First Name],
+	 COUNT([First Name]) AS 'NUMBERS OF APPEARING'
+FROM
+	Employees
+
+GROUP BY [First Name]
+ORDER BY 'NUMBERS OF APPEARING' DESC;
+
+--- Way #2
+
+SELECT
+	[First Name],
+	COUNT([First Name]) AS NumbersOfAppearing
+FROM
+	Employees E
+GROUP BY
+	[First Name]
+HAVING
+	COUNT([First Name]) > '1';
+
+--- Way #3 
+
+SELECT 
+	 [First Name],
+	 COUNT([First Name]) AS 'NUMBERS OF APPEARING'
+FROM
+	Employees
+
+GROUP BY [First Name]
+
+EXCEPT 
+
+SELECT 
+ [First Name],
+ COUNT([First Name]) AS 'NUMBERS OF APPEARING'
+FROM
+	Employees
+GROUP BY [First Name]
+HAVING COUNT([First Name])  = '1' 
+
+--- Number 3
+
+SELECT 
+	[First Name],
+	[Last Name],
+	[Start_Work],
+	D.Department_Name
+FROM
+	Employees E
+LEFT JOIN
+	Departments D	
+ON
+	E.Department_Code = D.Department_Code
+WHERE 
+	D.Department_Name IN ('Marketing','Service')
+AND
+	E.Start_Work < '2015'
+ORDER BY E.Start_Work ASC;
+
+--- Number 4
+
+SELECT
+	Product_Name
+FROM
+	Product
+WHERE Price BETWEEN 250 AND 600;
+
+--- Number 5
+
+SELECT 
+	[First Name],
+	[Last Name]
+FROM
+	Employees E
+LEFT JOIN
+	SALES S
+ON 
+	E.Emp_Nr = S.Emp_nr 
+LEFT JOIN 
+	Product P
+ON
+	S.Product_Id = P.Product_Id
+WHERE
+	Salary > '20000' 
+OR 
+	P.Product_Name = 'Mouse';

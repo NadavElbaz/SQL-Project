@@ -1,0 +1,32 @@
+---Exercise Number 1
+/*
+Return the first name of the employee and the number of times this name appears in the table
+*/
+
+---Exercise Number 2
+
+/*
+Write a query that displays the first name of the employee that is repeated more than once in the table
+Working
+*/
+
+--- Exercise Number 3
+
+/*
+ Write a query that displays the first name, last name, and job start date of
+the employees from marketing and service departments who started their work before 2015 and arrange your
+ presentation by the employees from the most senior employee to the least senior employee
+*/
+
+--- Exercise Number 4
+
+/*
+Write a query that shows the name of the products whose price is between NIS 250 and NIS 600
+*/
+
+--- Exercise Number 5
+
+/*
+Write a query that displays the first name and last name of all employees
+whose salary is over NIS 20,000 or who sold a mouse
+*/
