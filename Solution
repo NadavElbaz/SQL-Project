@@ -96,3 +96,63 @@ WHERE
 	Salary > '20000' 
 OR 
 	P.Product_Name = 'Mouse';
+
+--- Number 6
+
+SELECT TOP 1  
+	[Last Name]
+FROM
+	Employees E
+LEFT JOIN 
+	SALES S
+ON
+	E.Emp_Nr = S.Emp_nr 
+LEFT JOIN
+	Product P
+ON
+	S.Product_Id = P.Product_Id
+WHERE
+	P.Product_Name = 'Keyboard'
+ORDER BY [Last Name] ASC;
+
+--- Number 7
+
+SELECT
+	*,
+	CASE
+		WHEN Price >= 500
+			THEN 'pensive'
+			ELSE  'Cheap'
+		END AS ProductValue
+FROM
+	Product P
+
+--- Number 8
+
+SELECT
+	E.[First Name] + ' ' + E.[Last Name] AS 'Full_Name',
+	T1.ProductValue ProductValue,
+	COUNT(E.Emp_nr) TOTAL_SALES	
+FROM
+	SALES S
+INNER JOIN
+	Employees E
+ON 
+	E.Emp_Nr = S.Emp_nr
+INNER JOIN
+	(SELECT
+		*,
+		CASE
+		WHEN Price >= 500
+			THEN 'pensive'
+			ELSE  'Cheap'
+		END AS ProductValue
+	FROM
+		Product P) T1
+ON
+	T1.Product_Id = S.Product_Id
+GROUP BY
+	T1.ProductValue,E.[First Name],E.[Last Name]
+ORDER BY 
+	T1.ProductValue
+
