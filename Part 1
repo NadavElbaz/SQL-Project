@@ -1,151 +1,20 @@
-DROP TABLE Project.People.Countries
-DROP TABLE Project.People.Customers
-DROP TABLE Project.TVshows.Category
-DROP SCHEMA TVshows
-DROP SCHEMA People
+/*Hebrew below
 
-USE MASTER;
+My project was created following my private learning journey.
+As a data analyst, I constantly strive to learn and improve in order to be better.
+The project tells the story of a small insurance company, which was just established,
+with 5 small departments and about 10 employees.
+In my structured analysis,
+the process of retrieving data about the company and drawing conclusions about it will be presented verbally and visually,
+as required of me as the company's analyst.
 
-DROP DATABASE Project
-;
-GO
+---
 
-CREATE DATABASE Project;
+הפרויקט שלי נוצר בעקבות מסע למידה פרטי שלי.
+בתור דאטה אנליסט, אני שואף כל הזמן ללמוד ולהשתפר במטרה להיות טוב יותר.
+הפרויקט מספר את סיפורה של חברת ביטוח קטנה, שהרגע הוקמה, 
+בעלת 5 מחלקות קטנות וכ-10 עובדים.
+בניתוח שבניתי, יוצג תהליך שליפת הנתונים על החברה והסקת המסקנות כלפיה באופן מילולי וויזואלי, 
+כפי שנדרש ממני בתור האנליסט של החברה.
 
-USE Project;
-
-CREATE SCHEMA People;
-GO
-
-CREATE TABLE People.Customers
-(
-    ID TINYINT NOT NULL,
-    FirstName VARCHAR (20) NOT NULL,
-    LastName VARCHAR (20) NOT NULL,
-    JoinTime DATE NOT NULL,
-	
-);
-
-INSERT INTO People.Customers VALUES (1,'PENELOPE','GUINESS','2006-02-15 04:34:33'),
-(2,'NICK','WAHLBERG','2006-02-15 04:34:33'),
-(3,'ED','CHASE','2006-02-15 04:34:33'),
-(4,'JENNIFER','DAVIS','2006-02-15 04:34:33'),
-(5,'JOHNNY','LOLLOBRIGIDA','2006-02-15 04:34:33'),
-(6,'BETTE','NICHOLSON','2006-02-15 04:34:33'),
-(7,'GRACE','MOSTEL','2006-02-15 04:34:33'),
-(8,'MATTHEW','JOHANSSON','2006-02-15 04:34:33'),
-(9,'JOE','SWANK','2006-02-15 04:34:33'),
-(10,'CHRISTIAN','GABLE','2006-02-15 04:34:33'),
-(11,'ZERO','CAGE','2006-02-15 04:34:33'),
-(12,'KARL','BERRY','2006-02-15 04:34:33'),
-(13,'UMA','WOOD','2006-02-15 04:34:33'),
-(14,'VIVIEN','BERGEN','2006-02-15 04:34:33'),
-(15,'CUBA','OLIVIER','2006-02-15 04:34:33'),
-(16,'FRED','COSTNER','2006-02-15 04:34:33'),
-(17,'HELEN','VOIGHT','2006-02-15 04:34:33'),
-(18,'DAN','TORN','2006-02-15 04:34:33'),
-(19,'BOB','FAWCETT','2006-02-15 04:34:33'),
-(20,'LUCILLE','TRACY','2006-02-15 04:34:33'),
-(21,'KIRSTEN','PALTROW','2006-02-15 04:34:33'),
-(22,'ELVIS','MARX','2006-02-15 04:34:33'),
-(23,'SANDRA','KILMER','2006-02-15 04:34:33'),
-(24,'CAMERON','STREEP','2006-02-15 04:34:33'),
-(25,'KEVIN','BLOOM','2006-02-15 04:34:33'),
-(26,'RIP','CRAWFORD','2006-02-15 04:34:33'),
-(27,'JULIA','MCQUEEN','2006-02-15 04:34:33'),
-(28,'WOODY','HOFFMAN','2006-02-15 04:34:33'),
-(29,'ALEC','WAYNE','2006-02-15 04:34:33'),
-(30,'SANDRA','PECK','2006-02-15 04:34:33'),
-(31,'SISSY','SOBIESKI','2006-02-15 04:34:33'),
-(32,'TIM','HACKMAN','2006-02-15 04:34:33'),
-(33,'MILLA','PECK','2006-02-15 04:34:33'),
-(34,'AUDREY','OLIVIER','2006-02-15 04:34:33'),
-(35,'JUDY','DEAN','2006-02-15 04:34:33'),
-(36,'BURT','DUKAKIS','2006-02-15 04:34:33'),
-(37,'VAL','BOLGER','2006-02-15 04:34:33'),
-(38,'TOM','MCKELLEN','2006-02-15 04:34:33'),
-(39,'GOLDIE','BRODY','2006-02-15 04:34:33'),
-(40,'JOHNNY','CAGE','2006-02-15 04:34:33'),
-(41,'JODIE','DEGENERES','2006-02-15 04:34:33'),
-(42,'TOM','MIRANDA','2006-02-15 04:34:33'),
-(43,'KIRK','JOVOVICH','2006-02-15 04:34:33'),
-(44,'NICK','STALLONE','2006-02-15 04:34:33'),
-(45,'REESE','KILMER','2006-02-15 04:34:33'),
-(46,'PARKER','GOLDBERG','2006-02-15 04:34:33'),
-(47,'JULIA','BARRYMORE','2006-02-15 04:34:33'),
-(48,'FRANCES','DAY-LEWIS','2006-02-15 04:34:33'),
-(49,'ANNE','CRONYN','2006-02-15 04:34:33'),
-(50,'NATALIE','HOPKINS','2006-02-15 04:34:33'),
-(51,'GARY','PHOENIX','2006-02-15 04:34:33'),
-(52,'CARMEN','HUNT','2006-02-15 04:34:33'),
-(53,'MENA','TEMPLE','2006-02-15 04:34:33'),
-(54,'PENELOPE','PINKETT','2006-02-15 04:34:33'),
-(55,'FAY','KILMER','2006-02-15 04:34:33'),
-(56,'DAN','HARRIS','2006-02-15 04:34:33'),
-(57,'JUDE','CRUISE','2006-02-15 04:34:33'),
-(58,'CHRISTIAN','AKROYD','2006-02-15 04:34:33'),
-(59,'DUSTIN','TAUTOU','2006-02-15 04:34:33'),
-(60,'HENRY','BERRY','2006-02-15 04:34:33'),
-(61,'CHRISTIAN','NEESON','2006-02-15 04:34:33'),
-(62,'JAYNE','NEESON','2006-02-15 04:34:33'),
-(63,'CAMERON','WRAY','2006-02-15 04:34:33'),
-(64,'RAY','JOHANSSON','2006-02-15 04:34:33'),
-(65,'ANGELA','HUDSON','2006-02-15 04:34:33'),
-(66,'MARY','TANDY','2006-02-15 04:34:33'),
-(67,'JESSICA','BAILEY','2006-02-15 04:34:33'),
-(68,'RIP','WINSLET','2006-02-15 04:34:33'),
-(69,'KENNETH','PALTROW','2006-02-15 04:34:33'),
-(70,'MICHELLE','MCCONAUGHEY','2006-02-15 04:34:33'),
-(71,'ADAM','GRANT','2006-02-15 04:34:33'),
-(72,'SEAN','WILLIAMS','2006-02-15 04:34:33'),
-(73,'GARY','PENN','2006-02-15 04:34:33'),
-(74,'MILLA','KEITEL','2006-02-15 04:34:33'),
-(75,'BURT','POSEY','2006-02-15 04:34:33'),
-(76,'ANGELINA','ASTAIRE','2006-02-15 04:34:33'),
-(77,'CARY','MCCONAUGHEY','2006-02-15 04:34:33'),
-(78,'GROUCHO','SINATRA','2006-02-15 04:34:33'),
-(79,'MAE','HOFFMAN','2006-02-15 04:34:33'),
-(80,'RALPH','CRUZ','2006-02-15 04:34:33'),
-(81,'SCARLETT','DAMON','2006-02-15 04:34:33'),
-(82,'WOODY','JOLIE','2006-02-15 04:34:33'),
-(83,'BEN','WILLIS','2006-02-15 04:34:33'),
-(84,'JAMES','PITT','2006-02-15 04:34:33'),
-(85,'MINNIE','ZELLWEGER','2006-02-15 04:34:33'),
-(86,'GREG','CHAPLIN','2006-02-15 04:34:33'),
-(87,'SPENCER','PECK','2006-02-15 04:34:33'),
-(88,'KENNETH','PESCI','2006-02-15 04:34:33'),
-(89,'CHARLIZE','DENCH','2006-02-15 04:34:33'),
-(90,'SEAN','GUINESS','2006-02-15 04:34:33'),
-(91,'CHRISTOPHER','BERRY','2006-02-15 04:34:33'),
-(92,'KIRSTEN','AKROYD','2006-02-15 04:34:33'),
-(93,'ELLEN','PRESLEY','2006-02-15 04:34:33'),
-(94,'KENNETH','TORN','2006-02-15 04:34:33'),
-(95,'DARYL','WAHLBERG','2006-02-15 04:34:33'),
-(96,'GENE','WILLIS','2006-02-15 04:34:33'),
-(97,'MEG','HAWKE','2006-02-15 04:34:33'),
-(98,'CHRIS','BRIDGES','2006-02-15 04:34:33'),
-(99,'JIM','MOSTEL','2006-02-15 04:34:33'),
-(100,'SPENCER','DEPP','2006-02-15 04:34:33')
-;
-GO
-
-SELECT
-	 ID,
-     FirstName,
-	 LastName ,
-     JoinTime
-FROM
-	 People.Customers
-;
-
-CREATE SCHEMA TVShows;
-
-
-CREATE TABLE TVShows.Category
-(
-    ID TINYINT NOT NULL,
-    Category VARCHAR (30) NULL    
-);
-
-
-
+*/ 
