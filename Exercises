@@ -30,3 +30,24 @@ Write a query that shows the name of the products whose price is between NIS 250
 Write a query that displays the first name and last name of all employees
 whose salary is over NIS 20,000 or who sold a mouse
 */
+
+--- Exercise Number 6
+
+/*
+From the employee table, display the smallest last name alphabetically
+who sold a keyboard
+*/
+
+--- Exercise Number 7
+
+/*
+Write a query showing for each product whether it is cheap or expensive according to the following rule:
+'Expensive' = the price of the product is greater than or equal to 500 NIS
+'Cheap' = everything else
+*/
+
+--- Exercise Number 8
+
+/*
+Write a query based on the previous section in which the amount of sales for each employee in the division will be displayed
+cheap/expensive.
