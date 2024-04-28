@@ -1,4 +1,4 @@
-﻿/*
+*/
 Hebrew below
 
 My project was created following my private learning journey.
@@ -32,11 +32,11 @@ The document in front of you, contains the following files (By Numbers):
 
  suitable for junior level
 
-5. Solution file
+5. Solutions file
 
-6. Conclusions after analysis
+6. Displaying the data with visualization tools
 
-7. Displaying the data with visualization tools
+7. Summary table for CEO
 
 
 I will always be happy to contact you in any way for comments, job offers or just learning together.
@@ -48,8 +48,6 @@ LINKEDIN : https://www.linkedin.com/in/nadavelbaz/
 PHONE : +972503246046
 
 ---
-
-
 
 הפרויקט שלי נוצר בעקבות מסע למידה פרטי שלי.
 
@@ -88,3 +86,5 @@ PHONE : +972503246046
  https://www.linkedin.com/in/nadavelbaz/ :לינקדאין 
 
  050-3246046 : טלפון
+
+*/ 
